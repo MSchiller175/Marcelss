@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DonauCity RP - Baden Roleplay Server</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-animation"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DCRP Logo">
+                <span>DonauCity RP</span>
+            </a>
+            <button class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/rules">Regelwerk</a>
+                <a href="/keybinds">Tastenbelegung</a>
+                <a href="/jobs">Jobs</a>
+                <a href="/partner">Partner</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="page-transition">
+        <!-- Hero Section -->
+        <section class="hero">
+            <span class="badge">DONAUCITY Roleplay</span>
+            <h1>Willkommen in Baden's<br>Roleplay Community</h1>
+            <p>Tauche ein in eine lebendige Rollenspiel-Community, in der du deine eigene Geschichte in einer realistischen Umgebung schreiben kannst.</p>
+            <div class="buttons">
+                <a href="https://discord.gg/R4SkYbXXRY" class="button primary" target="_blank">
+                    <i class="fab fa-discord"></i> Discord beitreten
+                </a>
+                <a href="/rules" class="button secondary">Regelwerk lesen</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">👮</div>
+                <h3>Polizei</h3>
+                <p>Sorge für Recht und Ordnung in Baden. Werde Teil unserer Polizei und schütze die Bürger.</p>
+                <a href="/jobs#police" class="button secondary">Mehr erfahren</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚑</div>
+                <h3>Rettungsdienst</h3>
+                <p>Rette Leben und hilf Menschen in Not. Der Rettungsdienst sucht engagierte Mitarbeiter.</p>
+                <a href="/jobs#medic" class="button secondary">Mehr erfahren</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚒</div>
+                <h3>Feuerwehr</h3>
+                <p>Bekämpfe Brände und rette Menschen aus Notsituationen. Die Feuerwehr braucht dich!</p>
+                <a href="/jobs#fire" class="button secondary">Mehr erfahren</a>
+            </div>
+        </section>
+    </main>
+
+ 
+    <!-- Scripts -->
+    <script>
+        // Loading Screen
+        window.addEventListener('load', () => {
+            const loadingScreen = document.querySelector('.loading-screen');
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        });
+
+        // Mobile Menu
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Server Status Update
+        async function updateServerStatus() {
+            try {
+                const response = await fetch('/api/server-status');
+                const data = await response.json();
+                
+                const statusIndicator = document.querySelector('.status-indicator');
+                const statusText = statusIndicator.nextElementSibling;
+                const playerCount = statusText.nextElementSibling;
+
+                statusIndicator.className = `status-indicator ${data.online ? 'online' : 'offline'}`;
+                statusText.textContent = data.online ? 'Server Online' : 'Server Offline';
+                playerCount.textContent = `${data.players}/${data.max_players} Spieler`;
+            } catch (error) {
+                console.error('Fehler beim Abrufen des Server-Status:', error);
+            }
+        }
+
+        // Update server status every 30 seconds
+        setInterval(updateServerStatus, 30000);
+        updateServerStatus();
+    </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+.keybinds-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #ffffff;
+}
+
+.server-status {
+    background: rgba(10, 40, 25, 0.8);
+    border: 2px solid #2ecc71;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.2);
+}
+
+.server-status h2 {
+    color: #2ecc71;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.status-item {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #2ecc71;
+}
+
+.status-item span {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.keybinds-section {
+    background: rgba(10, 40, 25, 0.8);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.keybinds-section h2 {
+    color: #2ecc71;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.keybinds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.keybind-item {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border-left: 4px solid #2ecc71;
+}
+
+.keybind-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.2);
+}
+
+.key {
+    display: inline-block;
+    background: #2ecc71;
+    color: #0A2819;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 1rem;
+    min-width: 40px;
+    text-align: center;
+}
+
+.description {
+    color: #ffffff;
+    display: inline-block;
+}
+
+.commands-section {
+    margin-top: 2rem;
+    background: rgba(10, 40, 25, 0.8);
+    border-radius: 10px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.commands-section h2 {
+    color: #2ecc71;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.command-item {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #2ecc71;
+    transition: all 0.3s ease;
+}
+
+.command-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.2);
+}
+
+.command {
+    color: #2ecc71;
+    font-family: monospace;
+    font-size: 1.1rem;
+    margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .keybinds-container {
+        padding: 1rem;
+    }
+    
+    .keybinds-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .status-grid {
+        grid-template-columns: 1fr;
+    }
+}

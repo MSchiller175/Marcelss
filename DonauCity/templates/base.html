@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}DonauCity Roleplay{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='loading-effects.css') }}">
+    {% block extra_css %}{% endblock %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loading-logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DonauCity Logo">
+        </div>
+        <div class="loading-text">Laden...</div>
+        <div class="loading-progress">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <header class="page-header">
+        <div class="header-content">
+            <h1>{% block header_title %}DonauCity Roleplay{% endblock %}</h1>
+            <p>{% block header_subtitle %}Willkommen in Baden, Österreich{% endblock %}</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <a href="{{ url_for('home') }}" class="nav-item">Home</a>
+        <a href="{{ url_for('rules') }}" class="nav-item">Regeln</a>
+        <a href="{{ url_for('jobs') }}" class="nav-item">Jobs</a>
+        <a href="{{ url_for('keybinds') }}" class="nav-item">Keybinds</a>
+        <a href="{{ url_for('partner') }}" class="nav-item">Partner</a>
+    </nav>
+
+    <main class="content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DonauCity Roleplay. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='page-transitions.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

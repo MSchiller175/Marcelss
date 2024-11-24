@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}DonauCity Roleplay - Startseite{% endblock %}
+
+{% block page_type %}home{% endblock %}
+
+{% block loading_text %}Willkommen in DonauCity{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <header class="hero">
+        <h1>DonauCity Roleplay</h1>
+        <p>Erlebe das ultimative Roleplay-Erlebnis in Baden, Österreich</p>
+    </header>
+
+    <section class="features">
+        <!-- Hier kommt der Rest des Homepage-Inhalts -->
+    </section>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+{% endblock %}

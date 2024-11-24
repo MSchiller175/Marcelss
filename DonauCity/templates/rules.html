@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regelwerk - DonauCity RP</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='rules.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='loading.css') }}">
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DCRP Logo">
+        </div>
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Laden...</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DCRP Logo">
+                <span>DonauCity RP</span>
+            </a>
+            <button class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/rules" class="active">Regelwerk</a>
+                <a href="/keybinds">Tastenbelegung</a>
+                <a href="/jobs">Jobs</a>
+                <a href="/partner">Partner</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Image -->
+    <div class="header-image">
+        <img src="{{ url_for('static', filename='images/hintergrund.png') }}" alt="DonauCity Header">
+        <div class="header-overlay"></div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="light x1"></div>
+        <div class="light x2"></div>
+        <div class="light x3"></div>
+        <div class="light x4"></div>
+        <div class="light x5"></div>
+        <div class="light x6"></div>
+        <div class="light x7"></div>
+        <div class="light x8"></div>
+        <div class="light x9"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="rules-container">
+        <div class="rules-header">
+            <h1>REGELWERK</h1>
+            <div class="rules-intro">
+                <p>Unser Hauptaugenmerk liegt auf dem Spielspaß. Um diesen zu gewährleisten, haben wir Regeln aufgestellt, die von ALLEN befolgt werden müssen. Verstöße werden mit Verwarnungen oder sogar einem Bann geahndet.</p>
+                <p class="warning">Denkt daran: Unwissenheit schützt vor Strafe nicht!</p>
+                <p>Wir behalten uns das Recht vor, das Regelwerk jederzeit zu ändern und aktualisieren es regelmäßig. Bitte lest die Regeln bei jeder Änderung erneut durch, um auf dem aktuellen Stand zu bleiben. Das Ausnutzen von Lücken im Regelwerk ist verboten und wird bestraft!</p>
+            </div>
+        </div>
+
+        <div class="rules-sections">
+            <!-- §1: Allgemeine Regeln -->
+            <section class="rule-section">
+                <h2>§1: Allgemeine Regeln</h2>
+                <div class="rule-items">
+                    <div class="rule-item">
+                        <h3>Abs. 1</h3>
+                        <p>Dein Leben steht an oberster Stelle. Schütze es.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>Abs. 2: RDM (Random Deathmatch)</h3>
+                        <p>Das grundlose Töten von Spielern ist verboten.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>Abs. 3: VDM (Vehicle Deathmatch)</h3>
+                        <p>Das sinnlose Überfahren von Spielern ist verboten.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>Abs. 4: Fraktionsfahrzeuge</h3>
+                        <p>Das sinnlose Stehlen von Fahrzeugen, die Fraktionen zugeordnet sind, ist verboten.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>Abs. 5: RP-Situationen</h3>
+                        <p>Nur die Projektleitung oder Admins dürfen entscheiden, wann eine RP-Situation vorzeitig beendet wird.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>Abs. 6: Verhalten</h3>
+                        <p>Beleidigungen, Rassismus, Sexismus, Homophobie und Hassreden aller Art sind verboten. Bitte unterscheidet zwischen RP- und OOC-Beleidigungen. Roleplay mit sexuellen Inhalten ist nicht erlaubt!</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>Abs. 7: Datenschutz</h3>
+                        <p>Datenschutz ist uns wichtig. Überlegt genau, was ihr über euch preisgebt. Solltet ihr Daten über andere missbrauchen, macht ihr euch strafbar.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>Abs. 8: Bugs & Exploits</h3>
+                        <p>Das Ausnutzen von Bugs oder Fehlern ist verboten und wird mit einer sofortigen Verwarnung oder einem Bann bestraft.</p>
+                    </div>
+                    <!-- Continue with remaining Abs. from §1 -->
+                </div>
+            </section>
+
+            <!-- §2: Personenbezogene Regeln -->
+            <section class="rule-section">
+                <h2>§2: Personenbezogene Regeln</h2>
+                <div class="rule-items">
+                    <div class="rule-item">
+                        <h3>Abs. 1: Namen</h3>
+                        <p>Die Wahl von Adelstiteln, bekannten oder unrealistischen Namen ist verboten.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>Abs. 2: Polizeiwaffen</h3>
+                        <p>Der Besitz von Polizeiwaffen ist nur nach einer gut ausgearbeiteten RP-Situation erlaubt.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>Abs. 3: Selbstmord</h3>
+                        <p>Es ist verboten, sich selbst das Leben zu nehmen oder sich von einem Teammitglied töten zu lassen, um einer Strafe zu entgehen.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- §3: Fremdwerbung -->
+            <section class="rule-section">
+                <h2>§3: Fremdwerbung</h2>
+                <div class="rule-items">
+                    <div class="rule-item">
+                        <h3>Abs. 1: Werbeverbot</h3>
+                        <p>Werbung für andere Server sowie das aktive Abwerben von Mitgliedern unseres Servers ist strengstens verboten und wird mit einem sofortigen Bann geahndet.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- §4: Streamen -->
+            <section class="rule-section">
+                <h2>§4: Streamen</h2>
+                <div class="rule-items">
+                    <div class="rule-item">
+                        <h3>Abs. 1: Grundsätzliches</h3>
+                        <p>Das Streamen ist grundsätzlich für jeden erlaubt, solange es regelkonform durchgeführt wird.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>Abs. 2: Information</h3>
+                        <p>Vor dem ersten Stream ist das Server-Team zu informieren.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>Abs. 3: Ankündigung</h3>
+                        <p>Jeder Stream muss auf unserem Discord angekündigt werden.</p>
+                    </div>
+                    <div class="rule-item">
+                        <h3>Abs. 4: Discord-Präsenz</h3>
+                        <p>Jeder Streamer muss sich während des Streams im Sprach-Channel „GoPro" auf unserem Discord aufhalten.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Continue with remaining sections -->
+        </div>
+
+        <div class="rules-footer">
+            <p>Bei Fragen zu den Regeln könnt ihr jederzeit gerne unser Team kontaktieren. Wir stehen euch jederzeit zur Verfügung und helfen euch gerne weiter.</p>
+            <p class="team-wishes">Das gesamte Team wünscht euch viel Spaß auf DonauCity-RP!</p>
+        </div>
+    </main>
+
+  
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        // Loading Screen
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.querySelector('.loading-screen').classList.add('fade-out');
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+/* Partner Page Specific Styles */
+.partner-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8rem 2rem 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.partner-section h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--accent) 0%, #4cd137 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: titleGlow 2s ease-in-out infinite;
+}
+
+.partner-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 4rem;
+    font-size: 1.2rem;
+}
+
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.partner-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.partner-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--accent) 0%, #4cd137 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.partner-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+}
+
+.partner-card:hover::before {
+    opacity: 0.1;
+}
+
+.partner-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--accent) 0%, #4cd137 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.partner-card:hover .partner-logo {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.partner-card h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.partner-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.partner-card .button {
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Animated Background */
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+.light {
+    position: absolute;
+    width: 0px;
+    opacity: .75;
+    background-color: white;
+    box-shadow: var(--accent) 0px 0px 20px 2px;
+    opacity: 0;
+    top: 100vh;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+
+.x1 {
+    animation: floatUp 4s infinite linear;
+    transform: scale(1.0);
+}
+
+.x2 {
+    animation: floatUp 7s infinite linear;
+    transform: scale(1.6);
+    left: 15%;
+}
+
+.x3 {
+    animation: floatUp 2.5s infinite linear;
+    transform: scale(.5);
+    left: -15%;
+}
+
+.x4 {
+    animation: floatUp 4.5s infinite linear;
+    transform: scale(1.2);
+    left: -34%;
+}
+
+.x5 {
+    animation: floatUp 8s infinite linear;
+    transform: scale(2.2);
+    left: -57%;
+}
+
+.x6 {
+    animation: floatUp 3s infinite linear;
+    transform: scale(.8);
+    left: -81%;
+}
+
+.x7 {
+    animation: floatUp 5.3s infinite linear;
+    transform: scale(3.2);
+    left: 37%;
+}
+
+.x8 {
+    animation: floatUp 4.7s infinite linear;
+    transform: scale(1.7);
+    left: 62%;
+}
+
+.x9 {
+    animation: floatUp 4.1s infinite linear;
+    transform: scale(0.9);
+    left: 85%;
+}
+
+@keyframes floatUp {
+    0% {
+        top: 100vh;
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        top: 0vh;
+        opacity: .8;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        top: -100vh;
+        opacity: 0;
+    }
+}
+
+@keyframes titleGlow {
+    0%, 100% {
+        filter: drop-shadow(0 0 5px var(--accent));
+    }
+    50% {
+        filter: drop-shadow(0 0 15px var(--accent));
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .partner-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .partner-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-card {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+}

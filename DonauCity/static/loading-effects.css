@@ -1,0 +1,111 @@
+/* Loading Screen Base */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 40, 25, 0.98);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Logo Animation */
+.loading-logo {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 2rem;
+    animation: logoAnimation 2s ease-in-out infinite;
+}
+
+.loading-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(46, 204, 113, 0.5));
+}
+
+/* Loading Text */
+.loading-text {
+    font-size: 1.5rem;
+    color: #2ecc71;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 2rem;
+    animation: textPulse 2s ease-in-out infinite;
+}
+
+/* Progress Bar */
+.loading-progress {
+    width: 200px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    margin-top: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #2ecc71;
+    animation: progress 2s ease-in-out infinite;
+}
+
+/* Particles */
+.loading-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #2ecc71;
+    border-radius: 50%;
+    animation: particleFloat 3s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes logoAnimation {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(180deg); }
+    100% { transform: scale(1) rotate(360deg); }
+}
+
+@keyframes textPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(0.95); }
+}
+
+@keyframes progress {
+    0% { transform: translateX(-100%); }
+    50% { transform: translateX(0); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes particleFloat {
+    0% { transform: translateY(0) scale(1); opacity: 0; }
+    50% { transform: translateY(-100px) scale(1.5); opacity: 1; }
+    100% { transform: translateY(-200px) scale(1); opacity: 0; }
+}
+
+/* Fade Out */
+.fade-out {
+    animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; visibility: hidden; }
+}
