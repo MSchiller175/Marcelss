@@ -1,18 +1,32 @@
 // Loading Screen
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const loadingScreen = document.querySelector('.loading-screen');
-    loadingScreen.style.opacity = '0';
-    setTimeout(() => {
-        loadingScreen.style.display = 'none';
-    }, 500);
+    
+    // Show loading screen
+    loadingScreen.style.display = 'flex';
+    
+    // Hide loading screen after page is fully loaded
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            loadingScreen.style.opacity = '0';
+            setTimeout(function() {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }, 1000);
+    });
 });
 
-// Mobile Menu
-const mobileMenuButton = document.querySelector('.mobile-menu-button');
-const navLinks = document.querySelector('.nav-links');
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const navLinks = document.querySelector('.nav-links');
 
-mobileMenuButton.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    if (mobileMenuButton && navLinks) {
+        mobileMenuButton.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            mobileMenuButton.classList.toggle('active');
+        });
+    }
 });
 
 // Server Status Update
