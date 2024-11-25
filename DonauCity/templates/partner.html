@@ -1,51 +1,16 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partner - DonauCity RP</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='partner.css') }}">
-    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <!-- Loading Screen -->
-    <div class="loading-screen">
-        <div class="loading-animation"></div>
-    </div>
+{% extends "base.html" %}
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="/" class="nav-brand">
-                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DCRP Logo">
-                <span>DonauCity RP</span>
-            </a>
-            <button class="mobile-menu-button">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="nav-links">
-                <a href="/">Home</a>
-                <a href="/rules">Regelwerk</a>
-                <a href="/keybinds">Tastenbelegung</a>
-                <a href="/jobs">Jobs</a>
-                <a href="/partner">Partner</a>
-            </div>
-        </div>
-    </nav>
+{% block title %}Partner - DonauCity RP{% endblock %}
 
-    <!-- Animated Background -->
-    <div class="bg-animation">
-        <div class="light"></div>
-    </div>
+{% block header_title %}Partner{% endblock %}
+{% block header_subtitle %}Unsere Partner & Sponsoren{% endblock %}
 
-    <!-- Main Content -->
-    <main class="page-transition">
-        <section class="partner-section">
-            <h1>Unsere Partner</h1>
-            <p class="partner-intro">Gemeinsam sind wir stärker! Entdecke unsere fantastischen Partner und ihre Communities.</p>
-            
-            <div class="partner-grid">
+{% block content %}
+<div class="content-container">
+    <div class="partner-grid">
+        <div class="partner-category">
+            <h2>💎 Premium Partner</h2>
+            <div class="partner-cards">
                 <!-- RaZors Gaming Lounge -->
                 <div class="partner-card">
                     <div class="partner-logo">
@@ -53,9 +18,7 @@
                     </div>
                     <h3>RaZors Gaming Lounge</h3>
                     <p>Eine lebendige Gaming-Community mit Fokus auf Qualität und Spaß.</p>
-                    <a href="https://discord.gg/8DNyqxYkE3" class="button primary" target="_blank">
-                        <i class="fab fa-discord"></i> Discord beitreten
-                    </a>
+                    <a href="https://discord.gg/8DNyqxYkE3" class="button primary" target="_blank">Discord beitreten</a>
                 </div>
 
                 <!-- iTz_grubii ARMY -->
@@ -65,11 +28,14 @@
                     </div>
                     <h3>iTz_grubii ARMY</h3>
                     <p>Eine starke Community mit Zusammenhalt und Engagement.</p>
-                    <a href="https://discord.gg/aqZ24xvcmr" class="button primary" target="_blank">
-                        <i class="fab fa-discord"></i> Discord beitreten
-                    </a>
+                    <a href="https://discord.gg/aqZ24xvcmr" class="button primary" target="_blank">Discord beitreten</a>
                 </div>
-
+            </div>
+        </div>
+        
+        <div class="partner-category">
+            <h2>🤝 Community Partner</h2>
+            <div class="partner-cards">
                 <!-- Server von Patz -->
                 <div class="partner-card">
                     <div class="partner-logo">
@@ -77,9 +43,7 @@
                     </div>
                     <h3>Server von Patz</h3>
                     <p>Qualitativ hochwertiger Gaming-Server mit aktiver Community.</p>
-                    <a href="https://discord.gg/6fEz66YYZe" class="button primary" target="_blank">
-                        <i class="fab fa-discord"></i> Discord beitreten
-                    </a>
+                    <a href="https://discord.gg/6fEz66YYZe" class="button primary" target="_blank">Discord beitreten</a>
                 </div>
 
                 <!-- DonauCityTransporte -->
@@ -89,9 +53,7 @@
                     </div>
                     <h3>DonauCityTransporte (DCTP)</h3>
                     <p>Professionelle Logistik und Transport-Community.</p>
-                    <a href="https://discord.gg/W4zdS5nyKk" class="button primary" target="_blank">
-                        <i class="fab fa-discord"></i> Discord beitreten
-                    </a>
+                    <a href="https://discord.gg/W4zdS5nyKk" class="button primary" target="_blank">Discord beitreten</a>
                 </div>
 
                 <!-- MCB320 -->
@@ -101,56 +63,20 @@
                     </div>
                     <h3>MCB320</h3>
                     <p>Innovative Gaming-Community mit einzigartigen Erlebnissen.</p>
-                    <a href="https://discord.gg/YgXSeQZRgV" class="button primary" target="_blank">
-                        <i class="fab fa-discord"></i> Discord beitreten
-                    </a>
+                    <a href="https://discord.gg/YgXSeQZRgV" class="button primary" target="_blank">Discord beitreten</a>
                 </div>
             </div>
-        </section>
-    </main>
-
- 
-
-    <!-- Scripts -->
-    <script>
-        // Loading Screen
-        window.addEventListener('load', () => {
-            const loadingScreen = document.querySelector('.loading-screen');
-            loadingScreen.style.opacity = '0';
-            setTimeout(() => {
-                loadingScreen.style.display = 'none';
-            }, 500);
-        });
-
-        // Mobile Menu
-        const mobileMenuButton = document.querySelector('.mobile-menu-button');
-        const navLinks = document.querySelector('.nav-links');
-
-        mobileMenuButton.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Server Status Update
-        async function updateServerStatus() {
-            try {
-                const response = await fetch('/api/server-status');
-                const data = await response.json();
-                
-                const statusIndicator = document.querySelector('.status-indicator');
-                const statusText = statusIndicator.nextElementSibling;
-                const playerCount = statusText.nextElementSibling;
-
-                statusIndicator.className = `status-indicator ${data.online ? 'online' : 'offline'}`;
-                statusText.textContent = data.online ? 'Server Online' : 'Server Offline';
-                playerCount.textContent = `${data.players}/${data.max_players} Spieler`;
-            } catch (error) {
-                console.error('Fehler beim Abrufen des Server-Status:', error);
-            }
-        }
-
-        // Update server status every 30 seconds
-        setInterval(updateServerStatus, 30000);
-        updateServerStatus();
-    </script>
-</body>
-</html>
+        </div>
+        
+        <div class="support-section">
+            <h2>🌟 Partner werden</h2>
+            <p>Möchtest du auch Partner von DonauCity RP werden? Kontaktiere uns!</p>
+            <div class="support-buttons">
+                <a href="mailto:partner@donaucity-rp.de" class="button primary">
+                    <i class="fas fa-envelope"></i> Partner werden
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

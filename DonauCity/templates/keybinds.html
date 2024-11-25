@@ -9,278 +9,148 @@
     <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen">
-        <div class="loading-animation"></div>
-        <span>Tastenbelegungen werden geladen...</span>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="/" class="nav-brand">
-                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DCRP Logo">
-                <span>DonauCity RP</span>
-            </a>
-            <button class="mobile-menu-button">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="nav-links">
-                <a href="/">Home</a>
-                <a href="/rules">Regelwerk</a>
-                <a href="/keybinds">Tastenbelegung</a>
-                <a href="/jobs">Jobs</a>
-                <a href="/partner">Partner</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Animated Background -->
-    <div class="bg-animation">
-        <div class="light x1"></div>
-        <div class="light x2"></div>
-        <div class="light x3"></div>
-        <div class="light x4"></div>
-        <div class="light x5"></div>
-        <div class="light x6"></div>
-        <div class="light x7"></div>
-        <div class="light x8"></div>
-        <div class="light x9"></div>
-    </div>
-
-    <!-- Main Content -->
-    <main class="page-transition">
-        <section class="keybinds-section">
-            <div class="keybinds-container">
-                <!-- Server Status Section -->
-                <div class="server-status">
-                    <h2>Server Status</h2>
-                    <div class="status-grid">
-                        <div class="status-item">
-                            <p>Status: <span>Online</span></p>
-                        </div>
-                        <div class="status-item">
-                            <p>Spieler: <span>32/64</span></p>
-                        </div>
-                        <div class="status-item">
-                            <p>Server: <span>MR_Bierkasten</span></p>
-                        </div>
-                        <div class="status-item">
-                            <p>Admin: <span>damarcelisehdo</span></p>
-                        </div>
-                    </div>
+    <!-- Hauptinhalt -->
+    <div class="content">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="/" class="nav-brand">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DCRP Logo">
+                    <span>DonauCity RP</span>
+                </a>
+                <button class="mobile-menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/rules">Regelwerk</a>
+                    <a href="/keybinds" class="active">Tastenbelegung</a>
+                    <a href="/jobs">Jobs</a>
+                    <a href="/partner">Partner</a>
                 </div>
-                <h1>Tastenbelegung</h1>
-                <h2>Alle wichtigen Tasten und Befehle im Überblick</h2>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="page-transition">
+            <!-- Hero Section -->
+            <section class="hero">
+                <span class="badge">DONAUCITY Tastenbelegung</span>
+                <h1>Steuerung &<br>Tastenkombinationen</h1>
+                <p>Hier findest du alle wichtigen Tastenkombinationen für DonauCity RP.</p>
+            </section>
+
+            <!-- Keybinds Container -->
+            <section class="content-container">
                 <div class="keybinds-grid">
+                    <!-- Grundlegende Steuerung -->
                     <div class="keybind-category">
-                        <h2>Grundlegende Steuerung</h2>
-                        <div class="keybind-list">
-                            <div class="keybind">
-                                <span class="key">T</span>
-                                <span class="description">Chat öffnen</span>
+                        <h2>⌨️ Grundlegende Steuerung</h2>
+                        <div class="keybind-items">
+                            <div class="keybind-item">
+                                <div class="key">T</div>
+                                <p>Chat öffnen</p>
                             </div>
-                            <div class="keybind">
-                                <span class="key">M</span>
-                                <span class="description">Handy öffnen</span>
+                            <div class="keybind-item">
+                                <div class="key">M</div>
+                                <p>Karte öffnen</p>
                             </div>
-                            <div class="keybind">
-                                <span class="key">I</span>
-                                <span class="description">Inventar öffnen</span>
+                            <div class="keybind-item">
+                                <div class="key">F1</div>
+                                <p>Hilfemenü</p>
                             </div>
-                            <div class="keybind">
-                                <span class="key">F2</span>
-                                <span class="description">Emote-Menü</span>
+                            <div class="keybind-item">
+                                <div class="key">F2</div>
+                                <p>Inventar</p>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Fahrzeug Steuerung -->
                     <div class="keybind-category">
-                        <h2>Fahrzeug-Steuerung</h2>
-                        <div class="keybind-list">
-                            <div class="keybind">
-                                <span class="key">L</span>
-                                <span class="description">Fahrzeug auf/abschließen</span>
+                        <h2>🚗 Fahrzeug Steuerung</h2>
+                        <div class="keybind-items">
+                            <div class="keybind-item">
+                                <div class="key">L</div>
+                                <p>Fahrzeug auf/abschließen</p>
                             </div>
-                            <div class="keybind">
-                                <span class="key">F</span>
-                                <span class="description">Ein-/Aussteigen</span>
+                            <div class="keybind-item">
+                                <div class="key">F</div>
+                                <p>Ein-/Aussteigen</p>
                             </div>
-                            <div class="keybind">
-                                <span class="key">X</span>
-                                <span class="description">Hände hoch</span>
+                            <div class="keybind-item">
+                                <div class="key">X</div>
+                                <p>Hände hoch</p>
                             </div>
-                            <div class="keybind">
-                                <span class="key">B</span>
-                                <span class="description">Motor an/aus</span>
+                            <div class="keybind-item">
+                                <div class="key">B</div>
+                                <p>Motor an/aus</p>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Animationen -->
                     <div class="keybind-category">
-                        <h2>Interaktionen</h2>
-                        <div class="keybind-list">
-                            <div class="keybind">
-                                <span class="key">E</span>
-                                <span class="description">Interagieren</span>
+                        <h2>🎭 Animationen</h2>
+                        <div class="keybind-items">
+                            <div class="keybind-item">
+                                <div class="key">F3</div>
+                                <p>Animationsmenü</p>
                             </div>
-                            <div class="keybind">
-                                <span class="key">G</span>
-                                <span class="description">Gang-Menü</span>
+                            <div class="keybind-item">
+                                <div class="key">F5</div>
+                                <p>Animation abbrechen</p>
                             </div>
-                            <div class="keybind">
-                                <span class="key">F3</span>
-                                <span class="description">Animationen</span>
+                            <div class="keybind-item">
+                                <div class="key">G</div>
+                                <p>Kriechen</p>
                             </div>
-                            <div class="keybind">
-                                <span class="key">F5</span>
-                                <span class="description">HUD ein-/ausblenden</span>
+                            <div class="keybind-item">
+                                <div class="key">Y</div>
+                                <p>Handy öffnen</p>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Job Steuerung -->
                     <div class="keybind-category">
-                        <h2>Fraktions-Funktionen</h2>
-                        <div class="keybind-list">
-                            <div class="keybind">
-                                <span class="key">F6</span>
-                                <span class="description">Fraktionsmenü</span>
+                        <h2>💼 Job Steuerung</h2>
+                        <div class="keybind-items">
+                            <div class="keybind-item">
+                                <div class="key">F6</div>
+                                <p>Jobmenü</p>
                             </div>
-                            <div class="keybind">
-                                <span class="key">F7</span>
-                                <span class="description">Dienstausweis</span>
+                            <div class="keybind-item">
+                                <div class="key">F7</div>
+                                <p>Rechnungsmenü</p>
                             </div>
-                            <div class="keybind">
-                                <span class="key">Y</span>
-                                <span class="description">Funkgerät</span>
+                            <div class="keybind-item">
+                                <div class="key">DEL</div>
+                                <p>Admin-Menü</p>
                             </div>
-                            <div class="keybind">
-                                <span class="key">K</span>
-                                <span class="description">Schlüsselbund</span>
+                            <div class="keybind-item">
+                                <div class="key">K</div>
+                                <p>Schlüsselmenü</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="keybinds-section">
-                    <h2>Tastenbelegung</h2>
-                    <div class="keybinds-grid">
-                        <div class="keybind-item">
-                            <span class="key">F1</span>
-                            <span class="description">Handy (muss besitzen)</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">F2</span>
-                            <span class="description">Inventar</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">F3</span>
-                            <span class="description">Interaktionsmenü</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">F5</span>
-                            <span class="description">Emotes</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">F6</span>
-                            <span class="description">Job Interaktionen</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">F7</span>
-                            <span class="description">Rechnungen</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">F8</span>
-                            <span class="description">FiveM Console</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">F10</span>
-                            <span class="description">Scoreboard</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">F11</span>
-                            <span class="description">Fahrzeugsteuerung</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">G</span>
-                            <span class="description">Gurt</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">`</span>
-                            <span class="description">Umfallen</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">U</span>
-                            <span class="description">Autoschlüssel (Job und Privat)</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">X</span>
-                            <span class="description">Emote abbrechen</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">H</span>
-                            <span class="description">Hände hoch</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">B</span>
-                            <span class="description">Mit dem Finger zeigen / Motor starten</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">T</span>
-                            <span class="description">Befehlchat öffnen</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">K</span>
-                            <span class="description">Visn_are Menü</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">J</span>
-                            <span class="description">Visn_are Open Self Menu</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">Z</span>
-                            <span class="description">Kleidungs Interaktionen</span>
-                        </div>
-                        <div class="keybind-item">
-                            <span class="key">L</span>
-                            <span class="description">Chat-Einstellungen</span>
-                        </div>
+
+                <!-- Support Section -->
+                <div class="support-section">
+                    <h2>🤝 Hilfe & Support</h2>
+                    <p>Du hast Fragen zur Steuerung? Lade dir die Übersicht herunter!</p>
+                    <div class="support-buttons">
+                        <a href="#" class="button primary" onclick="downloadKeybindsPDF()">
+                            <i class="fas fa-download"></i> Steuerung als PDF
+                        </a>
                     </div>
                 </div>
-                <!-- Commands Section -->
-                <div class="commands-section">
-                    <h2>Wichtige Befehle</h2>
-                    <div class="command-item">
-                        <span class="command">/report</span>
-                        <span class="description">Admin rufen (Grund angeben)</span>
-                    </div>
-                    <div class="command-item">
-                        <span class="command">/carry</span>
-                        <span class="description">Person tragen</span>
-                    </div>
-                    <div class="command-item">
-                        <span class="command">/driver</span>
-                        <span class="description">Sitzplatz wechseln (auch mit Shift-Taste)</span>
-                    </div>
-                    <div class="command-item">
-                        <span class="command">/me</span>
-                        <span class="description">Nachricht im Chat schreiben</span>
-                    </div>
-                    <div class="command-item">
-                        <span class="command">/bullets</span>
-                        <span class="description">Zeigt Kugeln in eigenen Körperteilen</span>
-                    </div>
-                    <div class="command-item">
-                        <span class="command">/showbullets</span>
-                        <span class="description">Zeigt Kugeln im nächsten Spieler</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-
+            </section>
+        </main>
+    </div>
 
     <!-- Scripts -->
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
 </body>
 </html>

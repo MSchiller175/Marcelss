@@ -36,7 +36,7 @@ def server_status():
     # Hier später die echte Server-Status-Logik implementieren
     return jsonify({
         "online": True,
-        "players": 32,
+        "players": 15,
         "max_players": 64
     })
 

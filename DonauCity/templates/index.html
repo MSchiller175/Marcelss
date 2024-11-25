@@ -5,84 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DonauCity RP - Baden Roleplay Server</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='slider.css') }}">
     <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen">
-        <div class="loading-animation"></div>
-    </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="/" class="nav-brand">
-                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DCRP Logo">
-                <span>DonauCity RP</span>
-            </a>
-            <button class="mobile-menu-button">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="nav-links">
-                <a href="/">Home</a>
-                <a href="/rules">Regelwerk</a>
-                <a href="/keybinds">Tastenbelegung</a>
-                <a href="/jobs">Jobs</a>
-                <a href="/partner">Partner</a>
+        <!-- Loading Screen -->
+        <div class="loading-screen">
+            <div class="loader-content">
+                <img src="https://cdn-longterm.mee6.xyz/plugins/embeds/images/961606797418975232/c8b6132a079d43b9fd8367d8cd22a1a81f837fcaa0afb6e7765a278369971164.png" alt="DCRP Logo" class="loader-logo">
+                <div class="loader-animation">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+                <div class="loader-text">Willkommen in DonauCity</div>
             </div>
         </div>
-    </nav>
+    
+        <!-- Main Content -->
+        <div class="content" style="display: none;">
+    <!-- Hauptinhalt -->
+    <div class="content">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="/" class="nav-brand">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DCRP Logo">
+                    <span>DonauCity RP</span>
+                </a>
+                <button class="mobile-menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links">
+                    <a href="/" class="active">Home</a>
+                    <a href="/rules">Regelwerk</a>
+                    <a href="/keybinds">Tastenbelegung</a>
+                    <a href="/jobs">Jobs</a>
+                    <a href="/partner">Partner</a>
+                </div>
+            </div>
+        </nav>
 
-    <!-- Main Content -->
-    <main class="page-transition">
         <!-- Hero Section -->
         <section class="hero">
-            <span class="badge">DONAUCITY Roleplay</span>
-            <h1>Willkommen in Baden's<br>Roleplay Community</h1>
-            <p>Tauche ein in eine lebendige Rollenspiel-Community, in der du deine eigene Geschichte in einer realistischen Umgebung schreiben kannst.</p>
-            <div class="buttons">
-                <a href="https://discord.gg/R4SkYbXXRY" class="button primary" target="_blank">
-                    <i class="fab fa-discord"></i> Discord beitreten
-                </a>
-                <a href="/rules" class="button secondary">Regelwerk lesen</a>
+            <div class="hero-content">
+                <h1>Willkommen in Baden</h1>
+                <p>Erlebe Roleplay auf höchstem Niveau</p>
+                <div class="hero-buttons">
+                    <a href="https://discord.gg/donaucity" class="button primary">
+                        <i class="fab fa-discord"></i> Discord beitreten
+                    </a>
+                    <a href="#server-info" class="button secondary">
+                        <i class="fas fa-info-circle"></i> Mehr erfahren
+                    </a>
+                </div>
             </div>
         </section>
 
-        <!-- Features Section -->
-        <section class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">👮</div>
-                <h3>Polizei</h3>
-                <p>Sorge für Recht und Ordnung in Baden. Werde Teil unserer Polizei und schütze die Bürger.</p>
-                <a href="/jobs#police" class="button secondary">Mehr erfahren</a>
+        <!-- Server Info Section -->
+        <section id="server-info" class="server-info">
+            <!-- Was ist DonauCity Section -->
+<section class="about-donaucity">
+    <div class="about-content">
+        <h2>Was ist DonauCity?</h2>
+        <p>DonauCity ist ein Projekt, das eine lange Entwicklungsphase durchlaufen hat und nun die österreichische Kultur in ihrer ganzen Vielfalt widerspiegelt. Der FiveM-Roleplay-Server aus Österreich bietet dir ein unvergleichliches Spielerlebnis in einer authentischen und atmosphärischen Umgebung.</p>
+    </div>
+</section>
+            <!-- Team Bewerbung Section -->
+            <section class="team-application">
+                <div class="team-content">
+                    <img src="https://cdn-longterm.mee6.xyz/plugins/embeds/images/961606797418975232/c8b6132a079d43b9fd8367d8cd22a1a81f837fcaa0afb6e7765a278369971164.png" alt="DCRP Team" class="team-image">
+                    <div class="team-text">
+                        <h2>📢 Bewerbung für das DonauCityRP-Team [DCRP]</h2>
+                        <p>Du möchtest Teil unseres @✅ Team✅ werden?</p>
+                        <p>Dann reiche bitte eine ausführliche Bewerbung über ein Ticket ein.</p>
+                        <h3>📩 So funktioniert es:</h3>
+                        <ol>
+                            <li>Öffne ein Ticket in unserem Discord (siehe unten).</li>
+                            <li>Beschreibe darin, warum du ins Team möchtest und welche Erfahrungen oder Fähigkeiten du mitbringst.</li>
+                        </ol>
+                        <p class="team-cta">Wir freuen uns auf deine Bewerbung! 🎉</p>
+                        <a href="https://discord.gg/R4SkYbXXRY" class="button primary" target="_blank">
+                            <i class="fab fa-discord"></i> Jetzt bewerben
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👮</div>
+                    <h3>Polizei</h3>
+                    <p>Sorge für Recht und Ordnung in Baden. Werde Teil unserer Polizei und schütze die Bürger.</p>
+                    <a href="/jobs#police" class="button secondary">Mehr erfahren</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚑</div>
+                    <h3>Rettungsdienst</h3>
+                    <p>Rette Leben und hilf Menschen in Not. Der Rettungsdienst sucht engagierte Mitarbeiter.</p>
+                    <a href="/jobs#medic" class="button secondary">Mehr erfahren</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚒</div>
+                    <h3>Feuerwehr</h3>
+                    <p>Bekämpfe Brände und rette Menschen aus Notsituationen. Die Feuerwehr braucht dich!</p>
+                    <a href="/jobs#fire" class="button secondary">Mehr erfahren</a>
+                </div>
+            </section>
+        </section>
+
+        <!-- Beautiful Moments Section -->
+        <section class="moments-section">
+            <div class="section-title">
+                <h2>Schöne Momente</h2>
+                <p>Eindrücke aus unserem Roleplay-Server</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">🚑</div>
-                <h3>Rettungsdienst</h3>
-                <p>Rette Leben und hilf Menschen in Not. Der Rettungsdienst sucht engagierte Mitarbeiter.</p>
-                <a href="/jobs#medic" class="button secondary">Mehr erfahren</a>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🚒</div>
-                <h3>Feuerwehr</h3>
-                <p>Bekämpfe Brände und rette Menschen aus Notsituationen. Die Feuerwehr braucht dich!</p>
-                <a href="/jobs#fire" class="button secondary">Mehr erfahren</a>
+            
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/moment1.jpg') }}" alt="DonauCity RP Moment 1">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/moment2.jpg') }}" alt="DonauCity RP Moment 2">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/moment3.jpg') }}" alt="DonauCity RP Moment 3">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/moment4.jpg') }}" alt="DonauCity RP Moment 4">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/moment5.jpg') }}" alt="DonauCity RP Moment 5">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/moment6.jpg') }}" alt="DonauCity RP Moment 6">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/moment7.jpg') }}" alt="DonauCity RP Moment 7">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/moment8.jpg') }}" alt="DonauCity RP Moment 8">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/moment9.jpg') }}" alt="DonauCity RP Moment 9">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/moment10.jpg') }}" alt="DonauCity RP Moment 10">
+                    </div>
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/moment11.jpg') }}" alt="DonauCity RP Moment 11">
+                    </div>
+                </div>
+                
+                <button class="slider-button prev">❮</button>
+                <button class="slider-button next">❯</button>
+                
+                <div class="slider-dots"></div>
             </div>
         </section>
-    </main>
+    </div>
 
- 
-    <!-- Scripts -->
     <script>
-        // Loading Screen
-        window.addEventListener('load', () => {
-            const loadingScreen = document.querySelector('.loading-screen');
-            loadingScreen.style.opacity = '0';
-            setTimeout(() => {
-                loadingScreen.style.display = 'none';
-            }, 500);
-        });
-
         // Mobile Menu
         const mobileMenuButton = document.querySelector('.mobile-menu-button');
         const navLinks = document.querySelector('.nav-links');
@@ -112,6 +198,39 @@
         // Update server status every 30 seconds
         setInterval(updateServerStatus, 30000);
         updateServerStatus();
+    </script>
+
+            <!-- Donation Section -->
+            <section class="donation-section">
+                <div class="donation-content">
+                    <h2>Unterstütze DonauCityRP</h2>
+                    <p>Dies ist der einzige offizielle Spenden-Link für unseren Server. Zu 100% sicher und transparent!</p>
+                    <img src="https://cdn-longterm.mee6.xyz/plugins/embeds/images/961606797418975232/634e1f5f1573c824bc18e6d0135e4cc1fb907d6b421894c547f0957ca4f5dcb4.png" alt="DonauCity Spenden" class="donation-image">
+                    <div>
+                        <a href="https://www.paypal.com/paypalme/mcb320" class="donation-button" target="_blank">
+                            <i class="fab fa-paypal"></i> SPENDEN
+                        </a>
+                    </div>
+                    <p class="donation-notice">Ihre Unterstützung hilft uns dabei, DonauCityRP weiter zu verbessern und neue Features zu entwickeln.</p>
+                </div>
+            </section>
+
+    <script src="{{ url_for('static', filename='js/slider.js') }}"></script>
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const loadingScreen = document.querySelector('.loading-screen');
+                const content = document.querySelector('.content');
+                
+                loadingScreen.classList.add('fade-out');
+                content.style.display = 'block';
+                
+                setTimeout(function() {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 2000); // Zeige Loading Screen für 2 Sekunden
+        });
     </script>
 </body>
 </html>

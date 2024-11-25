@@ -1,117 +1,89 @@
 {% extends "base.html" %}
 
-{% block title %}Jobs - DonauCity Roleplay{% endblock %}
-
+{% block title %}Jobs - DonauCity RP{% endblock %}
 {% block header_title %}Jobs{% endblock %}
-{% block header_subtitle %}Entdecke deine Karrieremöglichkeiten{% endblock %}
+{% block header_subtitle %}Finde deinen Traumberuf in Baden{% endblock %}
 
 {% block content %}
-<div class="jobs-container">
-    <div class="jobs-content">
-        <!-- Öffentlicher Dienst -->
-        <section class="job-section">
-            <h2 class="section-title">Öffentlicher Dienst</h2>
-            
-            <div class="job-item">
-                <h3>👮 Polizei</h3>
-                <p>Sorge für Recht und Ordnung in der Stadt. Verfolge Verbrecher und beschütze die Bürger.</p>
-                <ul class="job-features">
-                    <li>Gehalt: €2500-4000</li>
-                    <li>Dienstfahrzeuge</li>
-                    <li>Aufstiegsmöglichkeiten</li>
-                </ul>
+<div class="content-container">
+    <div class="jobs-grid">
+        <!-- Staatliche Jobs -->
+        <div class="job-category">
+            <h2>👮 Staatliche Jobs</h2>
+            <div class="job-cards">
+                <div class="job-card">
+                    <div class="job-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Polizist</h3>
+                    <p>Sorge für Recht und Ordnung in Baden.</p>
+                    <ul>
+                        <li>Streifendienst</li>
+                        <li>Ermittlungen</li>
+                        <li>Verkehrskontrolle</li>
+                    </ul>
+                </div>
+                
+                <div class="job-card">
+                    <div class="job-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>Sanitäter</h3>
+                    <p>Rette Leben und hilf Menschen in Not.</p>
+                    <ul>
+                        <li>Notfallversorgung</li>
+                        <li>Krankentransport</li>
+                        <li>Erste Hilfe</li>
+                    </ul>
+                </div>
             </div>
+        </div>
 
-            <div class="job-item">
-                <h3>🚑 Rettungsdienst</h3>
-                <p>Rette Leben und versorge Verletzte. Ein wichtiger Dienst für die Gemeinschaft.</p>
-                <ul class="job-features">
-                    <li>Gehalt: €2300-3800</li>
-                    <li>Medizinische Ausrüstung</li>
-                    <li>Teamarbeit</li>
-                </ul>
-            </div>
+        <!-- Zivile Jobs -->
+        <div class="job-category">
+            <h2>🚗 Zivile Jobs</h2>
+            <div class="job-cards">
+                <div class="job-card">
+                    <div class="job-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>ÖAMTC</h3>
+                    <p>Repariere und Tuning-Möglichkeiten.</p>
+                    <ul>
+                        <li>Fahrzeugreparatur</li>
+                        <li>Tuning</li>
+                        <li>Fahrzeugwartung</li>
+                    </ul>
+                    <a href="https://discord.gg/weXTcsrrpg" class="button primary" target="_blank">
+                        <i class="fab fa-discord"></i> Discord beitreten
+                    </a>
+                </div>
 
-            <div class="job-item">
-                <h3>🚒 Feuerwehr</h3>
-                <p>Lösche Brände und rette Menschen aus Notsituationen.</p>
-                <ul class="job-features">
-                    <li>Gehalt: €2400-3900</li>
-                    <li>Spezialausrüstung</li>
-                    <li>Intensive Ausbildung</li>
-                </ul>
+                <div class="job-card">
+                    <div class="job-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Logistiker</h3>
+                    <p>Transportiere Waren durch die Stadt.</p>
+                    <ul>
+                        <li>Warentransport</li>
+                        <li>Lieferungen</li>
+                        <li>Spedition</li>
+                    </ul>
+                </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Zivile Berufe -->
-        <section class="job-section">
-            <h2 class="section-title">Zivile Berufe</h2>
-            
-            <div class="job-item">
-                <h3>🚗 Taxifahrer</h3>
-                <p>Befördere Passagiere durch die Stadt und verdiene gutes Trinkgeld.</p>
-                <ul class="job-features">
-                    <li>Flexibler Verdienst</li>
-                    <li>Eigenes Fahrzeug</li>
-                    <li>Freie Zeiteinteilung</li>
-                </ul>
+        <!-- Support -->
+        <div class="support-section">
+            <h2>❓ Fragen zu Jobs?</h2>
+            <p>Unser Team hilft dir bei der Berufswahl!</p>
+            <div class="support-buttons">
+                <a href="https://discord.gg/donaucity" class="button primary">
+                    <i class="fab fa-discord"></i> Support kontaktieren
+                </a>
             </div>
-
-            <div class="job-item">
-                <h3>🚛 Spediteur</h3>
-                <p>Transportiere Waren durch das Land und baue dein eigenes Logistik-Imperium auf.</p>
-                <ul class="job-features">
-                    <li>Hoher Verdienst</li>
-                    <li>Verschiedene Routen</li>
-                    <li>Unternehmensaufbau</li>
-                </ul>
-            </div>
-
-            <div class="job-item">
-                <h3>🔧 Mechaniker</h3>
-                <p>Repariere Fahrzeuge und tune sie für bessere Performance.</p>
-                <ul class="job-features">
-                    <li>Werkstattzugang</li>
-                    <li>Tuning-Möglichkeiten</li>
-                    <li>Stammkundschaft</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Weitere Karrieren -->
-        <section class="job-section">
-            <h2 class="section-title">Weitere Karrieren</h2>
-            
-            <div class="job-item">
-                <h3>⚖️ Anwalt</h3>
-                <p>Vertrete Klienten vor Gericht und kämpfe für Gerechtigkeit.</p>
-                <ul class="job-features">
-                    <li>Hoher Status</li>
-                    <li>Gute Bezahlung</li>
-                    <li>Rechtliche Macht</li>
-                </ul>
-            </div>
-
-            <div class="job-item">
-                <h3>🏪 Unternehmer</h3>
-                <p>Gründe dein eigenes Geschäft und werde zum erfolgreichen Geschäftsmann.</p>
-                <ul class="job-features">
-                    <li>Eigener Chef</li>
-                    <li>Unbegrenztes Potenzial</li>
-                    <li>Verschiedene Branchen</li>
-                </ul>
-            </div>
-
-            <div class="job-item">
-                <h3>🎵 DJ/Entertainer</h3>
-                <p>Unterhalte die Massen in Clubs und bei Events.</p>
-                <ul class="job-features">
-                    <li>Kreative Freiheit</li>
-                    <li>Netzwerken</li>
-                    <li>Event-Management</li>
-                </ul>
-            </div>
-        </section>
+        </div>
     </div>
 </div>
 {% endblock %}
